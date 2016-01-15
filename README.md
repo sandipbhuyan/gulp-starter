@@ -1,14 +1,16 @@
 # A fully featured asset pipeline based on gulp.
-Gulp Starter applies community best practices and allows you to quick start your next project 
-without worrying too much about automatization tasks. You can use any folder structure you 
-like (the current one, component based etc).
+
+Gulp Starter applies community best practices and allows you to quick start your next project /
+explore a new library's API without worrying too much about automatization tasks.
+
+It is **project structure agnostic**. You can use any folder structure you like (the current one, component based etc).
 
 You dont have to wait seconds until the re-compilation process is done, all tasks has 
-incremental build optimalization.
+**incremental build optimalization**.
 
-It is API agnostic, you can use the opt-in sample api or any existing backend api.
+It is **backend agnostic**, you can use the opt-in sample api or any existing backend api.
 
-This project inspired by [vigetlabs/gulp-starter](https://github.com/vigetlabs/gulp-starter).
+This project is inspired by [vigetlabs/gulp-starter](https://github.com/vigetlabs/gulp-starter).
 
 ```bash
 git clone https://github.com/vigetlabs/gulp-starter.git MyApp
@@ -24,7 +26,7 @@ cd MyApp && npm i
   - Sourcemaps
 - **JS:** 
   - Modular ES6 with [Babel](http://babeljs.io/)
-  - Stage 1 features
+  - [Stage 1](https://github.com/tc39/ecma262#current-proposals) features
   - [Flowtype](http://flowtype.org/) for static type check
   - JS linting with [eslint](http://eslint.org/)
 - **Development Mode:**
@@ -96,3 +98,11 @@ proxy: 'example.com',
 
 #### Why Browserify?
 [Why not?](https://gist.github.com/substack/68f8d502be42d5cd4942) I have abosuletly no problem with browserify.
+
+
+# Caveats
+
+### Eslint flowtype plugin with JetBreains ide
+The `eslint-plugin-flowtype` will kill WebStorm's (probably all JetBreains ide) built-in eslint support. If you
+experience this issue open `.eslintrc` and comment out `"plugins": ["flowtype"],`. An open ticket with the issue
+can be found [here](https://github.com/gcazaciuc/eslint-plugin-flowtype/issues/2).
