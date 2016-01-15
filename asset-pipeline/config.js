@@ -32,6 +32,8 @@ export default {
     fileName: 'main.js',
     bundleName: 'main.js',
     glob: '**/*.js',
+    // noParse is an array which will skip all require() and global parsing for each file in the array. Use this for
+    // giant libs like jquery or threejs that don't have any requires or node-style globals but take forever to parse.
     noParse: ['jquery', 'lodash', 'bootstrap', 'tether']
   },
 
