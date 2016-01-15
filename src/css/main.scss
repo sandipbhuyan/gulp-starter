@@ -1,0 +1,11 @@
+@import "vendor/vendor";
+
+@import "variables";
+@import "scaffolding";
+
+
+.sample-bg-image {
+  height: 200px;
+  width: 400px;
+  background-image: url("../img/sample.jpeg");
+}
