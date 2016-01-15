@@ -64,14 +64,14 @@ export default {
   images: {
     src: '.',
     dest: 'images',
-    glob: '**/*.+(png|jpg|jpeg|gif|bmp)',
+    glob: '**/*.+(png|jpg|jpeg|gif|bmp|svg)',
     cacheName: 'images-task'
   },
 
   fonts: {
     src: '.',
     dest: 'fonts',
-    glob: '**/*.+(eot|ttf|woff|woff2|otf|svg)',
+    glob: '**/*.+(eot|ttf|woff|woff2|otf)',
     cacheName: 'fonts-task'
   },
 

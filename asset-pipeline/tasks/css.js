@@ -11,7 +11,7 @@ import { bs } from './browser-sync';
 import cache from 'gulp-cached';
 import progeny from 'gulp-progeny';
 import flatten from 'gulp-flatten';
-import url from 'postcss-url';
+import assets from 'postcss-assets';
 
 const paths = {
   src: path.join(config.SRC_DIR, config.css.src, config.css.glob),
@@ -22,16 +22,10 @@ const processors = [
   autoprefixer({
     browsers: config.css.autoprefixerBrowsers
   }),
-  url({
-    url(imageUrl) {
-      let transformedUrl = imageUrl;
-      // urls which reference data: don't need to be transformed since they reference static rather than a path.
-      if (/(.*?)\.(png|jpg|jpeg|gif|bmp|svg)$/.test(imageUrl)) {
-        transformedUrl = '../images/' + imageUrl.split('/').pop();
-      }
-
-      return transformedUrl;
-    }
+  assets({
+    basePath: config.SRC_DIR,
+    loadPaths: [path.join(config.DEST_DIR, 'images')],
+    relativeTo: 'public/css'
   })
 ];
 
