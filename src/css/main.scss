@@ -7,12 +7,17 @@
   margin-top: 33px;
 }
 
+.fa-heart {
+  // http://cssnext.io/features/
+  color: rebeccapurple;
+}
+
 .sample-bg-image {
   // visit https://github.com/assetsjs/postcss-assets for more info
-  width: width('sample.jpeg');
-  height: height('sample.jpeg');
-  background-size: size('sample.jpeg');
-  background-image: resolve('sample.jpeg');
+  width: width("sample.jpeg");
+  height: height("sample.jpeg");
+  background-size: size("sample.jpeg");
+  background-image: resolve("sample.jpeg");
   // Optionally inline in Base64 encoding.
-  // background-image: inline('./sample.jpeg');
+  // background-image: inline("./sample.jpeg");
 }

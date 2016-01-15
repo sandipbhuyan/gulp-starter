@@ -22,6 +22,7 @@ cd MyApp && npm i
   - [Sass](http://sass-lang.com/)
   - [Libsass](http://sass-lang.com/libsass) for super fast compiles
   - [Autoprefixer](https://github.com/postcss/autoprefixer) - the most popular [PostCSS](https://github.com/postcss/postcss) plugin
+  - [CSSNext](http://cssnext.io/) - Use tomorrow’s CSS syntax, today.
   - CSS linting with [stylelint](http://stylelint.io/)
   - Sourcemaps
 - **JS:** 
