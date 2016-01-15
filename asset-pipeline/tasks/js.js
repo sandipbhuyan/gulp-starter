@@ -29,7 +29,7 @@ const options = {
     path.join(config.ROOT_DIR, 'node_modules'),
     path.join(config.ROOT_DIR, 'src')
   ],
-  extensions: ['.hbs']
+  extensions: config.js.extensions
 };
 
 if (config.isDev) _.extend(options, watchify.args);

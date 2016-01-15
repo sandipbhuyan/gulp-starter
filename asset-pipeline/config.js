@@ -34,7 +34,10 @@ export default {
     glob: '**/*.js',
     // noParse is an array which will skip all require() and global parsing for each file in the array. Use this for
     // giant libs like jquery or threejs that don't have any requires or node-style globals but take forever to parse.
-    noParse: ['jquery', 'lodash', 'bootstrap', 'tether']
+    noParse: ['jquery', 'lodash', 'bootstrap', 'tether'],
+    // extensions is an array of optional extra extensions for the module lookup machinery to use when the extension
+    // has not been specified. By default browserify considers only .js and .json files in such cases.
+    extensions: []
   },
 
   css: {
@@ -42,7 +45,9 @@ export default {
     dest: 'css',
     glob: '**/*.scss',
     cacheName: 'css-task',
-    // https://github.com/postcss/autoprefixer#browsers
+    // Autoprefixer uses Browserslist, so you can specify the browsers you want to target in your project by queries
+    // like last 2 versions or > 5%. For more info check out https://github.com/ai/browserslist#browsers and
+    // https://github.com/ai/browserslist#queries
     autoprefixerBrowsers: [
       'ie >= 10',
       'ie_mob >= 10',
@@ -73,6 +78,8 @@ export default {
   cssLint: {
     src: '.',
     glob: '**/*.scss',
+    // If you have built-in ide support for `stylelint` feel free to set this to true, if `ideSupport` is true.
+    // The `css-lint` task won't run after each css modification if true.
     ideSupport: false,
     cacheName: 'css-lint-task'
   },
@@ -80,6 +87,7 @@ export default {
   jsLint: {
     src: '.',
     glob: '**/*.js',
+    // Same as `cssLint.ideSupport`. For this you need `eslint` support.
     ideSupport: true,
     cacheName: 'js-lint-task'
   },
