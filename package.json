@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "gulp-starter",
-  "description": "A full asset pipeline based on gulp.",
+  "description": "A fully featured asset pipeline based on gulp.",
   "version": "0.0.1",
   "author": {
     "name": "Attila Egyed",
