@@ -81,7 +81,10 @@ export default {
     // If you have built-in ide support for `stylelint` feel free to set this to true, if `ideSupport` is true.
     // The `css-lint` task won't run after each css modification if true.
     ideSupport: false,
-    cacheName: 'css-lint-task'
+    cacheName: 'css-lint-task',
+    // Ignore files / folders from being linted. Note for `stylelint` you have to edit `.stylelintrc`
+    // ignoreFiles attribute.
+    ignoreGlob: '**/css/vendor/**'
   },
 
   jsLint: {

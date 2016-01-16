@@ -7,12 +7,20 @@ import postcss from 'gulp-postcss';
 import reporter from 'postcss-reporter';
 import scss from 'postcss-scss';
 import stylelint from 'stylelint';
+import doiuse from 'doiuse';
+import colorguard from 'colorguard';
+import streamFilter from 'postcss-stream-filter';
 
 const paths = {
   src: path.join(config.SRC_DIR, config.cssLint.src, config.cssLint.glob)
 };
 
 const processors = [
+  doiuse({
+    browsers: config.css.autoprefixerBrowsers,
+    ignoreFiles: [config.cssLint.ignoreGlob]
+  }),
+  streamFilter(config.cssLint.ignoreGlob, colorguard()),
   stylelint(),
   reporter({ clearMessages: true })
 ];

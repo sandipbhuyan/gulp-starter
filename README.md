@@ -23,7 +23,7 @@ cd MyApp && npm i
   - [Libsass](http://sass-lang.com/libsass) for super fast compiles
   - [Autoprefixer](https://github.com/postcss/autoprefixer) - the most popular [PostCSS](https://github.com/postcss/postcss) plugin
   - [CSSNext](http://cssnext.io/) - Use tomorrow’s CSS syntax, today.
-  - CSS linting with [stylelint](http://stylelint.io/)
+  - CSS linting with [stylelint](http://stylelint.io/), [doiuse](http://www.doiuse.com/) and [colorguard](https://github.com/SlexAxton/css-colorguard)
   - Sourcemaps
 - **JS:** 
   - Modular ES6 with [Babel](http://babeljs.io/)
