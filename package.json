@@ -1,11 +1,24 @@
 {
   "name": "gulp-starter",
-  "description": "A fully featured asset pipeline based on gulp.",
   "version": "1.0.0",
-  "author": {
-    "name": "Attila Egyed",
-    "email": "attila.egyed.91@gmail.com"
+  "description": "A fully featured asset pipeline based on gulp.",
+  "keywords": [
+    "gulp",
+    "starter",
+    "boilerplate",
+    "asset-pipeline",
+    "incremental-build",
+    "post-css",
+    "babel",
+    "ES2015"
+  ],
+  "author": "Attila Egyed <attila.egyed.91@gmail.com>",
+  "license": "MIT",
+  "repository": "tsm91/gulp-starter",
+  "bugs": {
+    "url": "https://github.com/tsm91/gulp-starter/issues"
   },
+  "homepage": "https://github.com/tsm91/gulp-starter",
   "engines": {
     "node": "^5.0.0",
     "npm": "^3.3.6"
