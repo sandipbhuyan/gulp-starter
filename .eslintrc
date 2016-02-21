@@ -1,9 +1,6 @@
 {
   "extends": "airbnb/base",
   "root": true,
-  // JetBreains ide users comment the plugins line below, otherwise the built-in eslint support will die.
-  // Issue: https://github.com/gcazaciuc/eslint-plugin-flowtype/issues/2
-  "plugins": ["flowtype"],
   "rules": {
     // disallow trailing commas
     "comma-dangle": [2, "never"],

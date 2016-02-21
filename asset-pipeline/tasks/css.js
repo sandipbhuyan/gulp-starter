@@ -25,9 +25,8 @@ const processors = [
     browsers: config.css.autoprefixerBrowsers
   }),
   assets({
-    basePath: config.SRC_DIR,
-    loadPaths: [path.join(config.DEST_DIR, 'images')],
-    relativeTo: 'public/css'
+    basePath: config.DEST_DIR,
+    loadPaths: config.css.postCSSAssetsLoadPaths
   })
 ];
 

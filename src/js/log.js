@@ -1,3 +1,3 @@
-export default (text: string = 'default text') => {
+export default (text = 'default text') => {
   console.log(text);
-}
+};

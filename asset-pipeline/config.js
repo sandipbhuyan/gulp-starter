@@ -3,14 +3,16 @@ import minimist from 'minimist';
 
 const argv = minimist(process.argv.slice(2));
 const ROOT_DIR = path.normalize(path.join(__dirname, '..'));
+const SRC_DIR = path.join(ROOT_DIR, 'src');
+const DEST_DIR = path.join(ROOT_DIR, 'public');
 
 export default {
   isDev: argv.dev,
   isProd: argv.prod,
 
   ROOT_DIR,
-  SRC_DIR: path.join(ROOT_DIR, 'src'),
-  DEST_DIR: path.join(ROOT_DIR, 'public'),
+  SRC_DIR,
+  DEST_DIR,
 
   html: {
     src: '.',
@@ -58,6 +60,10 @@ export default {
       'ios >= 7',
       'android >= 4.4',
       'bb >= 10'
+    ],
+    postCSSAssetsLoadPaths: [
+      path.join(DEST_DIR, 'images'),
+      path.join(DEST_DIR, 'fonts')
     ]
   },
 

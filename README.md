@@ -28,7 +28,6 @@ cd MyApp && npm i
 - **JS:** 
   - Modular ES6 with [Babel](http://babeljs.io/)
   - [Stage 1](https://github.com/tc39/ecma262#current-proposals) features
-  - [Flowtype](http://flowtype.org/) for static type check
   - JS linting with [eslint](http://eslint.org/)
 - **Development Mode:**
   - File Watching and Live Reloading with [BrowserSync](http://www.browsersync.io/)
@@ -100,10 +99,3 @@ proxy: 'example.com',
 #### Why Browserify?
 [Why not?](https://gist.github.com/substack/68f8d502be42d5cd4942) I have abosuletly no problem with browserify.
 
-
-# Caveats
-
-### Eslint flowtype plugin with JetBreains ide
-The `eslint-plugin-flowtype` will kill WebStorm's (probably all JetBreains ide) built-in eslint support. If you
-experience this issue open `.eslintrc` and comment out `"plugins": ["flowtype"],`. An open ticket with the issue
-can be found [here](https://github.com/gcazaciuc/eslint-plugin-flowtype/issues/2).
