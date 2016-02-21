@@ -1,6 +1,6 @@
 {
   "name": "gulp-starter-kit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A fully featured asset pipeline based on gulp.",
   "keywords": [
     "gulp",
