@@ -26,7 +26,8 @@ const processors = [
 ];
 
 gulp.task('css-lint', () => {
-  return gulp.src(paths.src)
+  gulp
+    .src(paths.src)
     .pipe(gulpIf(config.isDev, cache(config.cssLint.cacheName)))
     .pipe(postcss(processors, { syntax: scss }));
 });

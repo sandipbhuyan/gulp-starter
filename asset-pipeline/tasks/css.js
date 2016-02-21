@@ -37,7 +37,8 @@ if (config.isProd) processors.push(cssnano({ discardComments: { removeAll: true 
 const preTasks = (!config.cssLint.ideSupport && config.isDev) ? ['css-lint'] : [];
 
 gulp.task('css', preTasks, () => {
-  return gulp.src(paths.src)
+  gulp
+    .src(paths.src)
     .pipe(gulpIf(config.isDev, cache(config.css.cacheName)))
     .pipe(gulpIf(config.isDev, progeny()))
     .pipe(sourcemaps.init())

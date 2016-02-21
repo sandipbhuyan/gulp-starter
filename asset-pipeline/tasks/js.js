@@ -45,7 +45,8 @@ if (config.isDev) {
 }
 
 function bundle() {
-  return bundler.bundle()
+  return bundler
+    .bundle()
     .on('error', handleErrors)
     .pipe(source(config.js.bundleName))
     .pipe(buffer())

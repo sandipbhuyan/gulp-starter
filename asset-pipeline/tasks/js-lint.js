@@ -10,7 +10,8 @@ const paths = {
 };
 
 gulp.task('js-lint', () => {
-  return gulp.src(paths.src)
+  gulp
+    .src(paths.src)
     .pipe(gulpIf(config.isDev, cache(config.jsLint.cacheName)))
     .pipe(eslint())
     .pipe(eslint.format())

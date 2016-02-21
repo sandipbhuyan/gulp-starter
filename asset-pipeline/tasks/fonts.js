@@ -12,7 +12,8 @@ const paths = {
 };
 
 gulp.task('fonts', () => {
-  return gulp.src(paths.src)
+  gulp
+    .src(paths.src)
     .pipe(gulpIf(config.isDev, cache(config.fonts.cacheName, { optimizeMemory: true })))
     .pipe(flatten())
     .pipe(gulp.dest(paths.dest))

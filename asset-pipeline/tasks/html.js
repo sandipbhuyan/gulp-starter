@@ -11,7 +11,8 @@ const paths = {
 };
 
 gulp.task('html', () => {
-  return gulp.src(paths.src)
+  gulp
+    .src(paths.src)
     .pipe(gulpIf(config.isDev, cache(config.html.cacheName, { optimizeMemory: true })))
     .pipe(gulp.dest(paths.dest))
     .pipe(gulpIf(config.isDev, bs.stream()));
