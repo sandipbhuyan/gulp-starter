@@ -1,0 +1,14 @@
+{
+  "name": "gulp-starter-kit",
+  "dependencies": {},
+  "devDependencies": {},
+  "ambientDependencies": {
+    "gulp": "github:DefinitelyTyped/DefinitelyTyped/gulp/gulp.d.ts#fbdc1b91125a87e62be3803f58aabb176cc2fd50",
+    "gulp-cached": "github:DefinitelyTyped/DefinitelyTyped/gulp-cached/gulp-cached.d.ts#0dcd0aec0b31a86ea4d6490952176c22039a2dce",
+    "minimist": "github:DefinitelyTyped/DefinitelyTyped/minimist/minimist.d.ts#5974b1be295ed7f61ff611459bc06a56cb35fd0c",
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#48c1e3c1d6baefa4f1a126f188c27c4fefd36bff",
+    "orchestrator": "github:DefinitelyTyped/DefinitelyTyped/orchestrator/orchestrator.d.ts#422b006d39dd37fc667ce5464967ee3ff6135092",
+    "promise": "github:DefinitelyTyped/DefinitelyTyped/promise/promise.d.ts#52b68b9e9c434c51c78ee27066a5c473b112ba3f",
+    "q": "github:DefinitelyTyped/DefinitelyTyped/q/Q.d.ts#4de74cb527395c13ba20b438c3a7a419ad931f1c"
+  }
+}
