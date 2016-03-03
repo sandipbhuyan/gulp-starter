@@ -1,7 +1,7 @@
 declare module 'gulp-postcss' {
 
   interface IPostcss {
-    (processors: Array<any>): NodeJS.ReadWriteStream;
+    (processors: Array<any>, opts?: Object): NodeJS.ReadWriteStream;
   }
 
   const postcss: IPostcss;
