@@ -96,26 +96,36 @@ export default {
   jsLint: {
     src: '.',
     glob: '**/*.js',
+    ignoreGlob: '!**/node_modules/**',
     // Same as `cssLint.ideSupport`. For this you need `eslint` support.
     ideSupport: true,
     cacheName: 'js-lint-task'
+  },
+
+  tsLint: {
+    src: '.',
+    glob: '**/*.ts',
+    ignoreGlob: ['!**/*.d.ts', '!**/node_modules/**'],
+    // Same as `cssLint.ideSupport`. For this you need `eslint` support.
+    ideSupport: true,
+    cacheName: 'ts-lint-task'
   },
 
   rev: {
     manifestFile: 'rev-manifest.json',
     assets: {
       glob: '**/*',
-      ignoreGlob: '/**/*.+(html|map)'
+      ignoreGlob: '**/*.+(html|map)'
     },
     updateReferences: {
-      glob: '/**/*.+(html|css|js)'
+      glob: '**/*.+(html|css|js)'
     }
   },
 
   sizeReport: {
     src: '.',
     glob: '**/*',
-    ignoreGlob: '!/**/rev-manifest.json'
+    ignoreGlob: '!**/rev-manifest.json'
   },
 
   watch: {

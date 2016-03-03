@@ -1,7 +1,0 @@
-# node_modules ignored by default
-
-# Ignore files in lib folder
-# src/common/lib/
-
-# Ignore shim folder
-src/common/shim/

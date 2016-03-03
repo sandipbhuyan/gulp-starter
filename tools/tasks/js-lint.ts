@@ -11,6 +11,9 @@ const paths = {
 
 gulp.task('js-lint', () => {
   return gulp
+    // TODO(tsm): Check why on earth this line can't ignore the node_module dir.
+    // Ofc dont forget to use ROOT_DIR instead of SRC_DIR.
+    // .src([paths.src, config.jsLint.ignoreGlob])
     .src(paths.src)
     .pipe(gulpIf(config.isDev, cache(config.jsLint.cacheName)))
     .pipe(eslint())
