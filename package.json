@@ -28,7 +28,7 @@
     "prod": "gulp --prod",
     "demo": "gulp browser-sync --prod",
     "dev": "gulp --dev",
-    "postinstall": "npm run dev"
+    "postinstall": "typings i && npm run dev"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.2",
