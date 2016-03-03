@@ -1,8 +1,8 @@
-import {Notification} from 'node-notifier';
-
 declare module 'gulp-notify' {
 
-  interface IOptions extends Notification {
+  import nodeNotifier = require('node-notifier');
+
+  interface IOptions extends nodeNotifier.Notification {
     onLast?: boolean;
     emitError?: boolean;
     templateOptions?: Object;
