@@ -1,9 +1,9 @@
-declare module "del" {
+declare module 'del' {
 
   interface IOptions {
-    force?: boolean,
-    dryRun?: boolean,
-    cwd?: string,
+    force?: boolean;
+    dryRun?: boolean;
+    cwd?: string;
   }
 
   interface IDel {

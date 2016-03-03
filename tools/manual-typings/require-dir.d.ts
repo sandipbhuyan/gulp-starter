@@ -1,4 +1,4 @@
-declare module "require-dir" {
+declare module 'require-dir' {
 
   interface IOptions {
     recurse?: boolean;
@@ -7,7 +7,7 @@ declare module "require-dir" {
   }
 
   interface IRequireDir {
-    (dir: string, options: IOptions): Object;
+    (dir: string, options?: IOptions): Object;
   }
 
   const requireDir: IRequireDir;
