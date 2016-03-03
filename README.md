@@ -78,6 +78,13 @@ If you want to check your production build run `npm run demo` http://localhost:8
 
 # FAQ
 
+#### Why the Gulp tasks written in TypeScript?
+Why not? If you'd rather use the JavaScript version, check out the JavaScript branch.
+
+```sh
+git clone -b javascript https://github.com/tsm91/gulp-starter.git MyApp
+```
+
 #### How to replace the sample API with an existing backend API?
 Go to `asset-pipeline/tasks/browser-sync.js` comment out option A, and the `middleware` part.
 
