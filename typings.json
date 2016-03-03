@@ -18,6 +18,7 @@
     "micromatch": "github:DefinitelyTyped/DefinitelyTyped/micromatch/micromatch.d.ts#7cda84786520fd0673c934fde1aa722083e05f7b",
     "minimist": "github:DefinitelyTyped/DefinitelyTyped/minimist/minimist.d.ts#5974b1be295ed7f61ff611459bc06a56cb35fd0c",
     "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#48c1e3c1d6baefa4f1a126f188c27c4fefd36bff",
+    "node-notifier": "github:DefinitelyTyped/DefinitelyTyped/node-notifier/node-notifier.d.ts#d9e56a56392e5cde59b516e214e3a4a08dab7fac",
     "orchestrator": "github:DefinitelyTyped/DefinitelyTyped/orchestrator/orchestrator.d.ts#422b006d39dd37fc667ce5464967ee3ff6135092",
     "parse-glob": "github:DefinitelyTyped/DefinitelyTyped/parse-glob/parse-glob.d.ts#1ae2ddf27c6e9b98ad7e7fa496788f1aadf37933",
     "promise": "github:DefinitelyTyped/DefinitelyTyped/promise/promise.d.ts#52b68b9e9c434c51c78ee27066a5c473b112ba3f",
