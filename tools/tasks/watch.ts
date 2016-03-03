@@ -1,8 +1,8 @@
 import config from '../config';
-import gulp from 'gulp';
-import path from 'path';
-import watch from 'gulp-watch';
-import _ from 'lodash';
+import * as gulp from 'gulp';
+import { join } from 'path';
+import * as watch from 'gulp-watch';
+import * as _ from 'lodash';
 
 gulp.task('watch', ['browser-sync'], () => {
   // javascript wathing handled in the javascripts task
@@ -12,7 +12,7 @@ gulp.task('watch', ['browser-sync'], () => {
     const task = config[taskName];
     if (!task) return;
 
-    const source = path.join(config.SRC_DIR, task.src, task.glob);
+    const source = join(config.SRC_DIR, task.src, task.glob);
 
     watch(source, () => gulp.start(taskName));
   });

@@ -1,5 +1,5 @@
-import path from 'path';
-import minimist from 'minimist';
+import * as path from 'path';
+import * as minimist from 'minimist';
 
 const argv = minimist(process.argv.slice(2));
 const ROOT_DIR = path.normalize(path.join(__dirname, '..'));
@@ -7,8 +7,8 @@ const SRC_DIR = path.join(ROOT_DIR, 'src');
 const DEST_DIR = path.join(ROOT_DIR, 'public');
 
 export default {
-  isDev: argv.dev,
-  isProd: argv.prod,
+  isDev: argv['dev'],
+  isProd: argv['prod'],
 
   ROOT_DIR,
   SRC_DIR,

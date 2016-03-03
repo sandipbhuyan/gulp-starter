@@ -1,5 +1,5 @@
-import browserSync from 'browser-sync';
-import gulp from 'gulp';
+import * as browserSync from 'browser-sync';
+import * as gulp from 'gulp';
 import config from '../config';
 
 export const bs = browserSync.create();

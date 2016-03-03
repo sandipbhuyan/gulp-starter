@@ -1,12 +1,12 @@
 import config from '../config';
-import gulp from 'gulp';
-import path from 'path';
-import eslint from 'gulp-eslint';
-import cache from 'gulp-cached';
-import gulpIf from 'gulp-if';
+import * as gulp from 'gulp';
+import { join } from 'path';
+import * as eslint from 'gulp-eslint';
+import * as cache from 'gulp-cached';
+import * as gulpIf from 'gulp-if';
 
 const paths = {
-  src: path.join(config.SRC_DIR, config.jsLint.src, config.jsLint.glob)
+  src: join(config.SRC_DIR, config.jsLint.src, config.jsLint.glob)
 };
 
 gulp.task('js-lint', () => {

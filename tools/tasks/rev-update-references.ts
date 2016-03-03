@@ -1,12 +1,12 @@
 import config from '../config';
-import gulp from 'gulp';
-import path from 'path';
-import revReplace from 'gulp-rev-replace';
+import *as gulp from 'gulp';
+import { join } from 'path';
+import *as revReplace from 'gulp-rev-replace';
 
 const paths = {
-  src: path.join(config.DEST_DIR, config.rev.updateReferences.glob),
+  src: join(config.DEST_DIR, config.rev.updateReferences.glob),
   dest: config.DEST_DIR,
-  manifest: path.join(config.DEST_DIR, config.rev.manifestFile)
+  manifest: join(config.DEST_DIR, config.rev.manifestFile)
 };
 
 gulp.task('rev-update-references', () => {

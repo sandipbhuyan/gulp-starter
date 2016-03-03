@@ -1,6 +1,6 @@
 import config from '../config';
-import gulp from 'gulp';
-import runSequence from 'run-sequence';
+import * as gulp from 'gulp';
+import * as runSequence from 'run-sequence';
 
 gulp.task('dev', (cb) => {
   runSequence(

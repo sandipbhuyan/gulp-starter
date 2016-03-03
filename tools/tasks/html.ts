@@ -1,13 +1,13 @@
 import config from '../config';
-import cache from 'gulp-cached';
-import gulp from 'gulp';
-import path from 'path';
-import gulpIf from 'gulp-if';
+import * as cache from 'gulp-cached';
+import * as gulp from 'gulp';
+import { join } from 'path';
+import * as gulpIf from 'gulp-if';
 import { bs } from './browser-sync';
 
 const paths = {
-  src: path.join(config.SRC_DIR, config.html.src, config.html.glob),
-  dest: path.join(config.DEST_DIR, config.html.dest)
+  src: join(config.SRC_DIR, config.html.src, config.html.glob),
+  dest: join(config.DEST_DIR, config.html.dest)
 };
 
 gulp.task('html', () => {
