@@ -5,10 +5,7 @@ import * as watch from 'gulp-watch';
 import * as _ from 'lodash';
 
 gulp.task('watch', ['browser-sync'], () => {
-  // javascript wathing handled in the javascripts task
-  const watchableTasks = ['html', 'assets', 'fonts', 'images', 'css'];
-
-  _.forEach(watchableTasks, (taskName) => {
+  _.forEach(config.watch.watchableTasks, (taskName) => {
     const task = config[taskName];
     if (!task) return;
 

@@ -113,7 +113,13 @@ export default {
   },
 
   sizeReport: {
+    src: '.',
     glob: '**/*',
     ignoreGlob: '!/**/rev-manifest.json'
+  },
+
+  watch: {
+    // javascript wathing handled in the javascripts task
+    watchableTasks: ['html', 'assets', 'fonts', 'images', 'css']
   }
 };
