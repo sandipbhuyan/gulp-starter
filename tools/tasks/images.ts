@@ -13,7 +13,7 @@ const paths = {
 };
 
 gulp.task('images', () => {
-  gulp
+  return gulp
     .src(paths.src)
     .pipe(gulpIf(config.isDev, cache(config.images.cacheName, { optimizeMemory: true })))
     .pipe(imagemin())

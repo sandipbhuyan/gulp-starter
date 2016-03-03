@@ -110,5 +110,10 @@ export default {
     updateReferences: {
       glob: '/**/*.+(html|css|js)'
     }
+  },
+
+  sizeReport: {
+    glob: '**/*',
+    ignoreGlob: '!/**/rev-manifest.json'
   }
 };

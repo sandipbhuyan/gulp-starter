@@ -11,7 +11,7 @@ const paths = {
 };
 
 gulp.task('assets', () => {
-  gulp
+  return gulp
     .src(paths.src)
     .pipe(gulpIf(config.isDev, cache(config.assets.cacheName, { optimizeMemory: true })))
     .pipe(gulp.dest(paths.dest))

@@ -14,7 +14,7 @@ gulp.task('rev-assets', () => {
   // Ignore files that may reference assets. We'll rev them in another task.
   const ignoreThese = `!${join(paths.dest, config.rev.assets.ignoreGlob)}`;
 
-  gulp
+  return gulp
     .src([paths.src, ignoreThese])
     .pipe(rev())
     .pipe(gulp.dest(paths.dest))

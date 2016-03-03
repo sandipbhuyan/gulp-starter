@@ -1,12 +1,14 @@
 import config from '../config';
 import * as gulp from 'gulp';
-import repeatString from '../lib/repeatString';
+import { join } from 'path';
 import * as sizereport from 'gulp-sizereport';
 
-gulp.task('size-report', () => {
-  const hashedFiles = `/**/*-${repeatString('[a-z,0-9]', 8)}*.*`;
+const paths = {
+  src: join(config.DEST_DIR, config.sizeReport.glob)
+};
 
-  gulp
-    .src([config.DEST_DIR + hashedFiles, `*!${config.rev.manifestFile}`])
+gulp.task('size-report', () => {
+  return gulp
+    .src([paths.src, config.sizeReport.ignoreGlob])
     .pipe(sizereport({ gzip: true }));
 });

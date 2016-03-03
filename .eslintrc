@@ -21,6 +21,8 @@
     // require a capital letter for constructors
     "new-cap": 1,
     // specify the maximum length of a line in your program
-    "max-len": [2, 120, 2, { "ignoreUrls": true, "ignoreComments": false }]
+    "max-len": [2, 120, 2, { "ignoreUrls": true, "ignoreComments": false }],
+    // disable arrow-body-style
+    "arrow-body-style": 0
   }
 }

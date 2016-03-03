@@ -10,7 +10,7 @@ const paths = {
 };
 
 gulp.task('rev-update-references', () => {
-  gulp
+  return gulp
     .src(paths.src)
     .pipe(revReplace({ manifest: gulp.src(paths.manifest) }))
     .pipe(gulp.dest(paths.dest));
