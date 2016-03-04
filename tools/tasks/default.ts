@@ -11,7 +11,8 @@ gulp.task('dev', (cb) => {
       'fonts',
       'images',
       'css',
-      'js'
+      'js',
+      'ts'
     ],
     'watch',
     cb);
@@ -22,6 +23,7 @@ gulp.task('prod', (cb) => {
     'clean',
     [
       'js-lint',
+      'ts-lint',
       'css-lint'
     ],
     [
@@ -29,7 +31,8 @@ gulp.task('prod', (cb) => {
       'fonts',
       'images',
       'css',
-      'js'
+      'js',
+      'ts'
     ],
     'rev-assets',
     'rev-update-references',

@@ -4,7 +4,7 @@ declare module 'gulp-typescript' {
   // interface IOptions {}
 
   interface IPlumber {
-    (opts?: Object): NodeJS.ReadWriteStream;
+    (opts?: Object): any;
 
     createProject(tsconfig: string, opts?: Object): any;
   }

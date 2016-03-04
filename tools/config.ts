@@ -111,7 +111,7 @@ export default {
   tsLint: {
     src: '.',
     glob: '**/*.ts',
-    ignoreGlob: ['!**/*.d.ts', '!**/node_modules/**'],
+    ignoreGlob: ['!**/node_modules/**', '!**/*.d.ts'],
     // Same as `cssLint.ideSupport`. For this you need `eslint` support.
     ideSupport: true,
     cacheName: 'ts-lint-task'
@@ -136,6 +136,6 @@ export default {
 
   watch: {
     // javascript wathing handled in the javascripts task
-    watchableTasks: ['html', 'assets', 'fonts', 'images', 'css']
+    watchableTasks: ['html', 'assets', 'fonts', 'images', 'css', 'ts']
   }
 };

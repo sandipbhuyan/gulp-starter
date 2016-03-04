@@ -3,8 +3,11 @@ import * as gulp from 'gulp';
 import { join } from 'path';
 import * as sourcemaps from 'gulp-sourcemaps';
 import * as plumber from 'gulp-plumber';
-import tsProject from '../utils/ts-project';
+import tsProjectFn from '../utils/ts-project';
 import * as typescript from 'gulp-typescript';
+import { bs } from './browser-sync';
+import * as gulpIf from 'gulp-if';
+import * as uglify from 'gulp-uglify';
 
 const paths = {
   src: [
@@ -15,12 +18,19 @@ const paths = {
   dest: join(config.DEST_DIR, config.ts.dest)
 };
 
-gulp.task('ts', () => {
-  return gulp
+const preTasks = (!config.tsLint.ideSupport && config.isDev) ? ['ts-lint'] : [];
+const tsProject = tsProjectFn();
+
+gulp.task('ts', preTasks, () => {
+  let result = gulp
     .src(paths.src)
     .pipe(plumber())
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(typescript(tsProject()))
+    .pipe(typescript(tsProject));
+
+  return result.js
+    .pipe(gulpIf(config.isProd, uglify()))
     .pipe(sourcemaps.write(config.isProd ? '.' : ''))
-    .pipe(gulp.dest(paths.dest));
+    .pipe(gulp.dest(paths.dest))
+    .pipe(gulpIf(config.isDev, bs.stream({once: true})));
 });
