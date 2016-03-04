@@ -42,6 +42,12 @@ export default {
     extensions: []
   },
 
+  ts: {
+    src: 'ts',
+    dest: 'ts',
+    glob: '**/*.ts'
+  },
+
   css: {
     src: 'css',
     dest: 'css',

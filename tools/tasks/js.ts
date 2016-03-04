@@ -6,7 +6,7 @@ import * as watchify from 'watchify';
 import * as source from 'vinyl-source-stream';
 import * as buffer from 'vinyl-buffer';
 import * as sourcemaps from 'gulp-sourcemaps';
-import handleErrors from '../lib/handleErrors';
+import handleErrors from '../utils/handleErrors';
 import * as _ from 'lodash';
 import { join } from 'path';
 // import hmr from 'browserify-hmr';
