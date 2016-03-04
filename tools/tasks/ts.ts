@@ -22,13 +22,14 @@ const preTasks = (!config.tsLint.ideSupport && config.isDev) ? ['ts-lint'] : [];
 const tsProject = tsProjectFn();
 
 gulp.task('ts', preTasks, () => {
-  let result = gulp
+  const result = gulp
     .src(paths.src)
     .pipe(plumber())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(typescript(tsProject));
 
-  return result.js
+  return result
+    .js
     .pipe(gulpIf(config.isProd, uglify()))
     .pipe(sourcemaps.write(config.isProd ? '.' : ''))
     .pipe(gulp.dest(paths.dest))
