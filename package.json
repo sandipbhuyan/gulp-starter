@@ -27,7 +27,7 @@
     "prod": "gulp --prod",
     "demo": "gulp browser-sync --prod",
     "dev": "gulp --dev",
-    "postinstall": "npm run dev"
+    "postinstall": "gulp check-versions && npm prune && npm run dev"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.2",
@@ -46,6 +46,7 @@
     "browser-sync": "^2.11.1",
     "browserify": "^13.0.0",
     "browserify-swap": "tsm91/browserify-swap#default-environment",
+    "chalk": "^1.1.1",
     "colorguard": "^1.0.1",
     "cssnano": "^3.5.2",
     "del": "^2.2.0",
@@ -81,6 +82,7 @@
     "postcss-scss": "^0.1.5",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
+    "semver": "^5.1.0",
     "stylelint": "^5.1.0",
     "stylelint-config-standard": "^4.0.1",
     "vinyl-buffer": "^1.0.0",

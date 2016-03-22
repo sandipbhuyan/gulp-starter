@@ -122,5 +122,10 @@ export default {
   watch: {
     // javascript wathing handled in the javascripts task
     watchableTasks: ['html', 'assets', 'fonts', 'images', 'css']
+  },
+  
+  checkVersions: {
+    npm: '3.3.6',
+    node: '5.0.0'
   }
 };
