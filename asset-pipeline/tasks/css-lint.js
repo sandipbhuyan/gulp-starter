@@ -1,6 +1,6 @@
 import config from '../config';
 import gulp from 'gulp';
-import path from 'path';
+import {join} from 'path';
 import cache from 'gulp-cached';
 import gulpIf from 'gulp-if';
 import postcss from 'gulp-postcss';
@@ -12,7 +12,7 @@ import colorguard from 'colorguard';
 import filterStream from 'postcss-filter-stream';
 
 const paths = {
-  src: path.join(config.SRC_DIR, config.cssLint.src, config.cssLint.glob)
+  src: join(config.SRC_DIR, config.cssLint.src, config.cssLint.glob)
 };
 
 const processors = [

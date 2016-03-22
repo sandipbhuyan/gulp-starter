@@ -1,15 +1,14 @@
 import config from '../config';
 import gulp from 'gulp';
-import path from 'path';
+import {join} from 'path';
 import watch from 'gulp-watch';
-import _ from 'lodash';
 
 gulp.task('watch', ['browser-sync'], () => {
-  _.forEach(config.watch.watchableTasks, (taskName) => {
+  config.watch.watchableTasks.forEach((taskName) => {
     const task = config[taskName];
     if (!task) return;
 
-    const source = path.join(config.SRC_DIR, task.src, task.glob);
+    const source = join(config.SRC_DIR, task.src, task.glob);
 
     watch(source, () => gulp.start(taskName));
   });

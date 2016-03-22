@@ -1,18 +1,18 @@
 import config from '../config';
 import gulp from 'gulp';
-import path from 'path';
+import {join} from 'path';
 import rev from 'gulp-rev';
 import revNapkin from 'gulp-rev-napkin';
 
 const paths = {
-  src: path.join(config.DEST_DIR, config.rev.assets.glob),
+  src: join(config.DEST_DIR, config.rev.assets.glob),
   dest: config.DEST_DIR,
-  manifest: path.join(config.DEST_DIR, config.rev.manifestFile)
+  manifest: join(config.DEST_DIR, config.rev.manifestFile)
 };
 
 gulp.task('rev-assets', () => {
   // Ignore files that may reference assets. We'll rev them in another task.
-  const ignoreThese = `!${path.join(paths.dest, config.rev.assets.ignoreGlob)}`;
+  const ignoreThese = `!${join(paths.dest, config.rev.assets.ignoreGlob)}`;
 
   return gulp
     .src([paths.src, ignoreThese])

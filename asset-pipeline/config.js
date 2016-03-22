@@ -1,10 +1,10 @@
-import path from 'path';
+import {join, normalize} from 'path';
 import minimist from 'minimist';
 
 const argv = minimist(process.argv.slice(2));
-const ROOT_DIR = path.normalize(path.join(__dirname, '..'));
-const SRC_DIR = path.join(ROOT_DIR, 'src');
-const DEST_DIR = path.join(ROOT_DIR, 'public');
+const ROOT_DIR = normalize(join(__dirname, '..'));
+const SRC_DIR = join(ROOT_DIR, 'src');
+const DEST_DIR = join(ROOT_DIR, 'public');
 
 export default {
   isDev: argv['dev'],
@@ -62,8 +62,8 @@ export default {
       'bb >= 10'
     ],
     postCSSAssetsLoadPaths: [
-      path.join(DEST_DIR, 'images'),
-      path.join(DEST_DIR, 'fonts')
+      join(DEST_DIR, 'images'),
+      join(DEST_DIR, 'fonts')
     ]
   },
 
@@ -123,7 +123,7 @@ export default {
     // javascript wathing handled in the javascripts task
     watchableTasks: ['html', 'assets', 'fonts', 'images', 'css']
   },
-  
+
   checkVersions: {
     npm: '3.3.6',
     node: '5.0.0'

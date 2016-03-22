@@ -2,12 +2,11 @@ import config from '../config';
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
-import path from 'path';
+import {join} from 'path';
 import cssnano from 'cssnano';
 import gulpIf from 'gulp-if';
-import { bs } from './browser-sync';
+import {bs} from './browser-sync';
 import cache from 'gulp-cached';
 import progeny from 'gulp-progeny';
 import flatten from 'gulp-flatten';
@@ -15,8 +14,8 @@ import assets from 'postcss-assets';
 import cssnext from 'postcss-cssnext';
 
 const paths = {
-  src: path.join(config.SRC_DIR, config.css.src, config.css.glob),
-  dest: path.join(config.DEST_DIR, config.css.dest)
+  src: join(config.SRC_DIR, config.css.src, config.css.glob),
+  dest: join(config.DEST_DIR, config.css.dest)
 };
 
 const processors = [

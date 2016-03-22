@@ -1,10 +1,10 @@
 import config from '../config';
 import gulp from 'gulp';
-import path from 'path';
+import {join} from 'path';
 import sizereport from 'gulp-sizereport';
 
 const paths = {
-  src: path.join(config.DEST_DIR, config.sizeReport.src, config.sizeReport.glob)
+  src: join(config.DEST_DIR, config.sizeReport.src, config.sizeReport.glob)
 };
 
 gulp.task('size-report', () => {

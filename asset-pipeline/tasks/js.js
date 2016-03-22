@@ -8,15 +8,15 @@ import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 import sourcemaps from 'gulp-sourcemaps';
 import _ from 'lodash';
-import path from 'path';
+import {join} from 'path';
 // import hmr from 'browserify-hmr';
 import { bs } from './browser-sync';
 import gulpIf from 'gulp-if';
 import uglify from 'gulp-uglify';
 
 const paths = {
-  src: path.join(config.SRC_DIR, config.js.src, config.js.fileName),
-  dest: path.join(config.DEST_DIR, config.js.dest)
+  src: join(config.SRC_DIR, config.js.src, config.js.fileName),
+  dest: join(config.DEST_DIR, config.js.dest)
 };
 
 const preTasks = (!config.jsLint.ideSupport && config.isDev) ? ['js-lint'] : [];
@@ -26,8 +26,8 @@ const options = {
   noParse: config.js.noParse,
   entries: [paths.src],
   paths: [
-    path.join(config.ROOT_DIR, 'node_modules'),
-    path.join(config.ROOT_DIR, 'src')
+    join(config.ROOT_DIR, 'node_modules'),
+    join(config.ROOT_DIR, 'src')
   ],
   extensions: config.js.extensions
 };

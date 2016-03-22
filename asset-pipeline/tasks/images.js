@@ -2,14 +2,14 @@ import config from '../config';
 import cache from 'gulp-cached';
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
-import path from 'path';
+import {join} from 'path';
 import gulpIf from 'gulp-if';
-import { bs } from './browser-sync';
+import {bs} from './browser-sync';
 import flatten from 'gulp-flatten';
 
 const paths = {
-  src: path.join(config.SRC_DIR, config.images.src, config.images.glob),
-  dest: path.join(config.DEST_DIR, config.images.dest)
+  src: join(config.SRC_DIR, config.images.src, config.images.glob),
+  dest: join(config.DEST_DIR, config.images.dest)
 };
 
 gulp.task('images', () => {
