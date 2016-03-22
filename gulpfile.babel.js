@@ -14,4 +14,4 @@
 import requireDir from 'require-dir';
 
 // Require all tasks in asset-pipeline/tasks, including sub folders
-requireDir('./tools/tasks', { recurse: true });
+requireDir('./asset-pipeline/tasks', { recurse: true });

@@ -1,12 +1,12 @@
 import config from '../config';
 import gulp from 'gulp';
+import plumber from 'gulp-plumber';
 import browserify from 'browserify';
 import babelify from 'babelify';
 import watchify from 'watchify';
 import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 import sourcemaps from 'gulp-sourcemaps';
-import handleErrors from '../utils/handleErrors';
 import _ from 'lodash';
 import path from 'path';
 // import hmr from 'browserify-hmr';
@@ -47,7 +47,7 @@ if (config.isDev) {
 function bundle() {
   return bundler
     .bundle()
-    .on('error', handleErrors)
+    .pipe(plumber())
     .pipe(source(config.js.bundleName))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
