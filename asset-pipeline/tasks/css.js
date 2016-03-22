@@ -20,8 +20,7 @@ const paths = {
 };
 
 const processors = [
-  cssnext(),
-  autoprefixer({
+  cssnext({
     browsers: config.css.autoprefixerBrowsers
   }),
   assets({
