@@ -1,13 +1,13 @@
 import config from '../config';
-import * as gulp from 'gulp';
+import gulp from 'gulp';
 import { join } from 'path';
-import * as sourcemaps from 'gulp-sourcemaps';
-import * as plumber from 'gulp-plumber';
+import sourcemaps from 'gulp-sourcemaps';
+import plumber from 'gulp-plumber';
 import tsProjectFn from '../utils/ts-project';
-import * as typescript from 'gulp-typescript';
+import typescript from 'gulp-typescript';
 import { bs } from './browser-sync';
-import * as gulpIf from 'gulp-if';
-import * as uglify from 'gulp-uglify';
+import gulpIf from 'gulp-if';
+import uglify from 'gulp-uglify';
 
 const paths = {
   src: [

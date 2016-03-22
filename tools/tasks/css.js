@@ -1,22 +1,22 @@
 import config from '../config';
-import * as gulp from 'gulp';
-import * as sass from 'gulp-sass';
-import * as postcss from 'gulp-postcss';
-import * as autoprefixer from 'autoprefixer';
-import * as sourcemaps from 'gulp-sourcemaps';
-import { join } from 'path';
-import * as cssnano from 'cssnano';
-import * as gulpIf from 'gulp-if';
+import gulp from 'gulp';
+import sass from 'gulp-sass';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import sourcemaps from 'gulp-sourcemaps';
+import path from 'path';
+import cssnano from 'cssnano';
+import gulpIf from 'gulp-if';
 import { bs } from './browser-sync';
-import * as cache from 'gulp-cached';
-import * as progeny from 'gulp-progeny';
-import * as flatten from 'gulp-flatten';
-import * as assets from 'postcss-assets';
-import * as cssnext from 'postcss-cssnext';
+import cache from 'gulp-cached';
+import progeny from 'gulp-progeny';
+import flatten from 'gulp-flatten';
+import assets from 'postcss-assets';
+import cssnext from 'postcss-cssnext';
 
 const paths = {
-  src: join(config.SRC_DIR, config.css.src, config.css.glob),
-  dest: join(config.DEST_DIR, config.css.dest)
+  src: path.join(config.SRC_DIR, config.css.src, config.css.glob),
+  dest: path.join(config.DEST_DIR, config.css.dest)
 };
 
 const processors = [

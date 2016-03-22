@@ -1,10 +1,10 @@
 import config from '../config';
-import * as gulp from 'gulp';
+import gulp from 'gulp';
 import { join } from 'path';
-import * as tslint from 'gulp-tslint';
-import * as tslintStylish from 'tslint-stylish';
-import * as cache from 'gulp-cached';
-import * as gulpIf from 'gulp-if';
+import tslint from 'gulp-tslint';
+import tslintStylish from 'tslint-stylish';
+import cache from 'gulp-cached';
+import gulpIf from 'gulp-if';
 
 const paths = {
   src: join(config.ROOT_DIR, config.tsLint.src, config.tsLint.glob)

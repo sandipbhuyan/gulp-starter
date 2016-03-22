@@ -1,4 +1,4 @@
-import * as notify from 'gulp-notify';
+import notify from 'gulp-notify';
 
 export default function (errorObject, callback) {
   notify.onError(

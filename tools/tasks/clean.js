@@ -1,5 +1,5 @@
-import * as gulp from 'gulp';
-import * as del from 'del';
+import gulp from 'gulp';
+import del from 'del';
 import config from '../config';
 
 gulp.task('clean', (cb) => {

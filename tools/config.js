@@ -1,5 +1,5 @@
-import * as path from 'path';
-import * as minimist from 'minimist';
+import path from 'path';
+import minimist from 'minimist';
 
 const argv = minimist(process.argv.slice(2));
 const ROOT_DIR = path.normalize(path.join(__dirname, '..'));

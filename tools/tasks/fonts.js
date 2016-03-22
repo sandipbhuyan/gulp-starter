@@ -1,14 +1,14 @@
 import config from '../config';
-import * as cache from 'gulp-cached';
-import * as gulp from 'gulp';
-import { join } from 'path';
-import * as gulpIf from 'gulp-if';
+import cache from 'gulp-cached';
+import gulp from 'gulp';
+import path from 'path';
+import gulpIf from 'gulp-if';
 import { bs } from './browser-sync';
-import * as flatten from 'gulp-flatten';
+import flatten from 'gulp-flatten';
 
 const paths = {
-  src: join(config.SRC_DIR, config.fonts.src, config.fonts.glob),
-  dest: join(config.DEST_DIR, config.fonts.dest)
+  src: path.join(config.SRC_DIR, config.fonts.src, config.fonts.glob),
+  dest: path.join(config.DEST_DIR, config.fonts.dest)
 };
 
 gulp.task('fonts', () => {
