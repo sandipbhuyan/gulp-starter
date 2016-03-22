@@ -42,12 +42,6 @@ export default {
     extensions: []
   },
 
-  ts: {
-    src: 'ts',
-    dest: 'ts',
-    glob: '**/*.ts'
-  },
-
   css: {
     src: 'css',
     dest: 'css',
@@ -108,15 +102,6 @@ export default {
     cacheName: 'js-lint-task'
   },
 
-  tsLint: {
-    src: '.',
-    glob: '**/*.ts',
-    ignoreGlob: ['!**/node_modules/**', '!**/*.d.ts'],
-    // Same as `cssLint.ideSupport`. For this you need `eslint` support.
-    ideSupport: true,
-    cacheName: 'ts-lint-task'
-  },
-
   rev: {
     manifestFile: 'rev-manifest.json',
     assets: {
@@ -136,6 +121,6 @@ export default {
 
   watch: {
     // javascript wathing handled in the javascripts task
-    watchableTasks: ['html', 'assets', 'fonts', 'images', 'css', 'ts']
+    watchableTasks: ['html', 'assets', 'fonts', 'images', 'css']
   }
 };
