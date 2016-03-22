@@ -1,6 +1,5 @@
 import config from '../config';
 import gulp from 'gulp';
-import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
@@ -40,11 +39,10 @@ const preTasks = (!config.cssLint.ideSupport && config.isDev) ? ['css-lint'] : [
 gulp.task('css', preTasks, () => {
   return gulp
     .src(paths.src)
-    .pipe(plumber())
     .pipe(gulpIf(config.isDev, cache(config.css.cacheName)))
     .pipe(gulpIf(config.isDev, progeny()))
     .pipe(sourcemaps.init())
-    .pipe(sass({ includePaths: ['./node_modules/'] }))
+    .pipe(sass({ includePaths: ['./node_modules/'] }).on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(sourcemaps.write(config.isProd ? '.' : ''))
     .pipe(flatten())
