@@ -12,6 +12,7 @@ import progeny from 'gulp-progeny';
 import flatten from 'gulp-flatten';
 import assets from 'postcss-assets';
 import cssnext from 'postcss-cssnext';
+import autoprefixer from 'autoprefixer';
 
 const paths = {
   src: join(config.SRC_DIR, config.css.src, config.css.glob),
@@ -20,6 +21,9 @@ const paths = {
 
 const processors = [
   cssnext({
+    warnForDuplicates: false
+  }),
+  autoprefixer({
     browsers: config.css.autoprefixerBrowsers
   }),
   assets({
