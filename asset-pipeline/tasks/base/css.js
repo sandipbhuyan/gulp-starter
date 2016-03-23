@@ -36,7 +36,7 @@ if (isProd) processors.push(cssnano({ discardComments: { removeAll: true } }));
 
 // because there is no ide integration (WebStorm) i have to run the linter before each stylesheets task
 // https://github.com/sasstools/sass-lint/issues/460
-const preTasks = (!cssLint.ideSupport && isDev) ? ['css-lint'] : [];
+const preTasks = (isDev && !cssLint.ideSupport) ? ['css-lint'] : [];
 
 gulp.task('css', preTasks, () => {
   return gulp
