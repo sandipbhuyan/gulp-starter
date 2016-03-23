@@ -66,7 +66,7 @@ Directory and top level settings are conveniently exposed in `asset-pipeline/con
 npm run prod
 ```
 
-This will compile revision and compressed files to `./public`. To build production files and preview them localy, run
+This will compile revision and compressed files to `./dist/prod`. To build production files and preview them localy, run
 
 ```
 npm run demo
@@ -84,7 +84,7 @@ Go to `asset-pipeline/tasks/browser-sync.js` comment out option A, and the `midd
 ```js
 // A, if you don't have a backend api use the built in server
 // server: {
-//   baseDir: 'public'
+//   baseDir: DEST_DIR
 // },
 
 // B, if you got a backend api proxy the request to it
@@ -92,7 +92,7 @@ proxy: 'example.com',
 
 // custom middleware for mock api
 // middleware(req, res, next) {
-//   require('../../api/api')(req, res, next);
+//   require(join(ROOT_DIR, 'api', 'api'))(req, res, next);
 // },
 ```
 
