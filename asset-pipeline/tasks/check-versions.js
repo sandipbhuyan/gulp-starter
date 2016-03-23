@@ -3,6 +3,7 @@ import config from '../config';
 import {exec} from 'child_process';
 import semver from 'semver';
 import chalk from 'chalk';
+import {isNull} from 'lodash';
 
 function reportError(message) {
   console.error(chalk.white.bgRed.bold(message));
@@ -11,7 +12,7 @@ function reportError(message) {
 
 gulp.task('check-versions', (cb) => {
   exec('npm --version', (error, stdout, stderr) => {
-    if (error !== null) {
+    if (!isNull(error)) {
       reportError('npm preinstall error: ' + error + stderr);
     }
 
@@ -21,7 +22,7 @@ gulp.task('check-versions', (cb) => {
   });
 
   exec('node --version', (error, stdout, stderr) => {
-    if (error !== null) {
+    if (!isNull(error)) {
       reportError('npm preinstall error: ' + error + stderr);
     }
 

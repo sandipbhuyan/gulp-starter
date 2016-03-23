@@ -10,7 +10,7 @@
     "incremental-build",
     "post-css",
     "babel",
-    "ES2015"
+    "ES2016"
   ],
   "author": "Attila Egyed <attila.egyed.91@gmail.com>",
   "license": "MIT",
@@ -33,7 +33,7 @@
     "bootstrap": "^4.0.0-alpha.2",
     "font-awesome": "^4.5.0",
     "jquery": "^3.0.0-beta1",
-    "lodash": "^4.5.0",
+    "lodash": "^4.6.1",
     "tether": "^1.2.0"
   },
   "devDependencies": {

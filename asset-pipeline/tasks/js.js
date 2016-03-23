@@ -7,10 +7,9 @@ import watchify from 'watchify';
 import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 import sourcemaps from 'gulp-sourcemaps';
-import _ from 'lodash';
 import {join} from 'path';
 // import hmr from 'browserify-hmr';
-import { bs } from './browser-sync';
+import {bs} from './browser-sync';
 import gulpIf from 'gulp-if';
 import uglify from 'gulp-uglify';
 
@@ -32,7 +31,7 @@ const options = {
   extensions: config.js.extensions
 };
 
-if (config.isDev) _.extend(options, watchify.args);
+if (config.isDev) Object.assign({}, options, watchify.args);
 
 let bundler = browserify(options);
 
