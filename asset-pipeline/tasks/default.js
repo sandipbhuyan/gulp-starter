@@ -1,4 +1,4 @@
-import config from '../config';
+import {isProd} from '../config';
 import gulp from 'gulp';
 import runSequence from 'run-sequence';
 
@@ -38,4 +38,4 @@ gulp.task('prod', (cb) => {
     cb);
 });
 
-gulp.task('default', [config.isProd ? 'prod' : 'dev']);
+gulp.task('default', [isProd ? 'prod' : 'dev']);

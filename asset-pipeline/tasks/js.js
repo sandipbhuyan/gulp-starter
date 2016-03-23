@@ -1,4 +1,4 @@
-import config from '../config';
+import {isDev, isProd, SRC_DIR, DEST_DIR, ROOT_DIR, js, jsLint} from '../config';
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import browserify from 'browserify';
@@ -14,31 +14,31 @@ import gulpIf from 'gulp-if';
 import uglify from 'gulp-uglify';
 
 const paths = {
-  src: join(config.SRC_DIR, config.js.src, config.js.fileName),
-  dest: join(config.DEST_DIR, config.js.dest)
+  src: join(SRC_DIR, js.src, js.fileName),
+  dest: join(DEST_DIR, js.dest)
 };
 
-const preTasks = (!config.jsLint.ideSupport && config.isDev) ? ['js-lint'] : [];
+const preTasks = (!jsLint.ideSupport && isDev) ? ['js-lint'] : [];
 
 const options = {
   debug: true,
-  noParse: config.js.noParse,
+  noParse: js.noParse,
   entries: [paths.src],
   paths: [
-    join(config.ROOT_DIR, 'node_modules'),
-    join(config.ROOT_DIR, 'src')
+    join(ROOT_DIR, 'node_modules'),
+    join(ROOT_DIR, 'src')
   ],
-  extensions: config.js.extensions
+  extensions: js.extensions
 };
 
-if (config.isDev) Object.assign({}, options, watchify.args);
+if (isDev) Object.assign({}, options, watchify.args);
 
 let bundler = browserify(options);
 
 bundler.transform(babelify);
 // bundler.transform(hmr);
 
-if (config.isDev) {
+if (isDev) {
   bundler = watchify(bundler);
   bundler.on('update', () => gulp.start('js'));
 }
@@ -47,13 +47,13 @@ function bundle() {
   return bundler
     .bundle()
     .pipe(plumber())
-    .pipe(source(config.js.bundleName))
+    .pipe(source(js.bundleName))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(gulpIf(config.isProd, uglify()))
-    .pipe(sourcemaps.write(config.isProd ? '.' : ''))
+    .pipe(gulpIf(isProd, uglify()))
+    .pipe(sourcemaps.write(isProd ? '.' : ''))
     .pipe(gulp.dest(paths.dest))
-    .pipe(gulpIf(config.isDev, bs.stream({ once: true })));
+    .pipe(gulpIf(isDev, bs.stream({ once: true })));
 }
 
 gulp.task('js', preTasks, () => bundle());

@@ -1,4 +1,5 @@
 import config from '../config';
+import {isDev, SRC_DIR, css, cssLint} from '../config';
 import gulp from 'gulp';
 import {join} from 'path';
 import cache from 'gulp-cached';
@@ -12,15 +13,15 @@ import colorguard from 'colorguard';
 import filterStream from 'postcss-filter-stream';
 
 const paths = {
-  src: join(config.SRC_DIR, config.cssLint.src, config.cssLint.glob)
+  src: join(SRC_DIR, cssLint.src, cssLint.glob)
 };
 
 const processors = [
   doiuse({
-    browsers: config.css.autoprefixerBrowsers,
-    ignoreFiles: [config.cssLint.ignoreGlob]
+    browsers: css.autoprefixerBrowsers,
+    ignoreFiles: [cssLint.ignoreGlob]
   }),
-  filterStream(config.cssLint.ignoreGlob, colorguard()),
+  filterStream(cssLint.ignoreGlob, colorguard()),
   stylelint(),
   reporter({ clearMessages: true })
 ];
@@ -28,6 +29,6 @@ const processors = [
 gulp.task('css-lint', () => {
   return gulp
     .src(paths.src)
-    .pipe(gulpIf(config.isDev, cache(config.cssLint.cacheName)))
+    .pipe(gulpIf(isDev, cache(cssLint.cacheName)))
     .pipe(postcss(processors, { syntax: scss }));
 });

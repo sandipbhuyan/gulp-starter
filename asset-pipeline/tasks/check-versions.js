@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import config from '../config';
+import {checkVersions} from '../config';
 import {exec} from 'child_process';
 import semver from 'semver';
 import chalk from 'chalk';
@@ -16,8 +16,8 @@ gulp.task('check-versions', (cb) => {
       reportError('npm preinstall error: ' + error + stderr);
     }
 
-    if (!semver.gte(stdout, config.checkVersions.npm)) {
-      reportError('NPM is not in required version! Required is ' + config.checkVersions.npm + ' and you\'re using ' + stdout);
+    if (!semver.gte(stdout, checkVersions.npm)) {
+      reportError('NPM is not in required version! Required is ' + checkVersions.npm + ' and you\'re using ' + stdout);
     }
   });
 
@@ -26,8 +26,8 @@ gulp.task('check-versions', (cb) => {
       reportError('npm preinstall error: ' + error + stderr);
     }
 
-    if (!semver.gte(stdout, config.checkVersions.node)) {
-      reportError('NODE is not in required version! Required is ' + config.checkVersions.node + ' and you\'re using ' + stdout);
+    if (!semver.gte(stdout, checkVersions.node)) {
+      reportError('NODE is not in required version! Required is ' + checkVersions.node + ' and you\'re using ' + stdout);
     }
   });
 

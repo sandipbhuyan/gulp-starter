@@ -1,6 +1,6 @@
 import browserSync from 'browser-sync';
 import gulp from 'gulp';
-import config from '../config';
+import {isProd} from '../config';
 
 export const bs = browserSync.create();
 
@@ -21,7 +21,7 @@ gulp.task('browser-sync', () => {
     },
 
     // default port
-    port: config.isProd ? 8080 : 3000,
+    port: isProd ? 8080 : 3000,
 
     // disable notify popup
     notify: false,
