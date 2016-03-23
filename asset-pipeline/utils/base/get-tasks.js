@@ -1,4 +1,4 @@
-import {isProd, devTasks, prodTasks} from '../../config';
+import { isProd, devTasks, prodTasks } from '../../config';
 
 const taskList = isProd ? prodTasks : devTasks;
 

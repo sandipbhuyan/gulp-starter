@@ -1,9 +1,9 @@
-import {isDev, SRC_DIR, DEST_DIR, fonts} from '../../config';
+import { isDev, SRC_DIR, DEST_DIR, fonts } from '../../config';
 import cache from 'gulp-cached';
 import gulp from 'gulp';
-import {join} from 'path';
+import { join } from 'path';
 import gulpIf from 'gulp-if';
-import {bs} from './browser-sync';
+import { bs } from './browser-sync';
 import flatten from 'gulp-flatten';
 
 const paths = {

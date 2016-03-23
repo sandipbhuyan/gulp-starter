@@ -1,6 +1,6 @@
 import * as config from '../../config';
 import gulp from 'gulp';
-import {join} from 'path';
+import { join } from 'path';
 import watch from 'gulp-watch';
 
 gulp.task('watch', ['browser-sync'], () => {

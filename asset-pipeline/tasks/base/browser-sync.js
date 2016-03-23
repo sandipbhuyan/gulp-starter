@@ -1,7 +1,7 @@
 import browserSync from 'browser-sync';
 import gulp from 'gulp';
-import {ROOT_DIR, DEST_DIR, browserSync as _browserSync} from '../../config';
-import {join} from 'path';
+import { ROOT_DIR, DEST_DIR, browserSync as _browserSync } from '../../config';
+import { join } from 'path';
 
 export const bs = browserSync.create();
 

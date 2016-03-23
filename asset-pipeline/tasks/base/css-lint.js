@@ -1,7 +1,6 @@
-import config from '../../config';
-import {isDev, SRC_DIR, css, cssLint} from '../../config';
+import { isDev, SRC_DIR, css, cssLint } from '../../config';
 import gulp from 'gulp';
-import {join} from 'path';
+import { join } from 'path';
 import cache from 'gulp-cached';
 import gulpIf from 'gulp-if';
 import postcss from 'gulp-postcss';

@@ -1,6 +1,6 @@
-import {DEST_DIR, sizeReport} from '../../config';
+import { DEST_DIR, sizeReport } from '../../config';
 import gulp from 'gulp';
-import {join} from 'path';
+import { join } from 'path';
 import sizereport from 'gulp-sizereport';
 
 const paths = {

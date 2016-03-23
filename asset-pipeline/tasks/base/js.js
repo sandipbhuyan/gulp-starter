@@ -1,4 +1,4 @@
-import {isDev, isProd, SRC_DIR, DEST_DIR, ROOT_DIR, js, jsLint} from '../../config';
+import { isDev, isProd, SRC_DIR, DEST_DIR, ROOT_DIR, js, jsLint } from '../../config';
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import browserify from 'browserify';
@@ -7,9 +7,9 @@ import watchify from 'watchify';
 import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 import sourcemaps from 'gulp-sourcemaps';
-import {join} from 'path';
+import { join } from 'path';
 // import hmr from 'browserify-hmr';
-import {bs} from './browser-sync';
+import { bs } from './browser-sync';
 import gulpIf from 'gulp-if';
 import uglify from 'gulp-uglify';
 

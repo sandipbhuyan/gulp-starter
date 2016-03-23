@@ -1,12 +1,12 @@
-import {isDev, isProd, SRC_DIR, DEST_DIR, css, cssLint} from '../../config';
+import { isDev, isProd, SRC_DIR, DEST_DIR, css, cssLint } from '../../config';
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
-import {join} from 'path';
+import { join } from 'path';
 import cssnano from 'cssnano';
 import gulpIf from 'gulp-if';
-import {bs} from './browser-sync';
+import { bs } from './browser-sync';
 import cache from 'gulp-cached';
 import progeny from 'gulp-progeny';
 import flatten from 'gulp-flatten';

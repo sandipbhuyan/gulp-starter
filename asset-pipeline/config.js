@@ -1,11 +1,11 @@
-import {join, normalize} from 'path';
+import { join, normalize } from 'path';
 import minimist from 'minimist';
 
 const argv = minimist(process.argv.slice(2));
 
-export const env = argv['prod'] ? 'prod' : 'dev';
-export const isDev = argv['dev'];
-export const isProd = argv['prod'];
+export const env = argv.prod ? 'prod' : 'dev';
+export const isDev = argv.dev;
+export const isProd = argv.prod;
 
 export const ROOT_DIR = normalize(join(__dirname, '..'));
 export const SRC_DIR = join(ROOT_DIR, 'src');
@@ -123,7 +123,7 @@ export const watch = {
 };
 
 export const browserSync = {
-  port: argv['port'] || (isProd ? 8080 : 3000)
+  port: argv.port || (isProd ? 8080 : 3000)
 };
 
 export const checkVersions = {
