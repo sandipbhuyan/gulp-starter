@@ -3,12 +3,14 @@ import minimist from 'minimist';
 
 const argv = minimist(process.argv.slice(2));
 
+export const env = argv['prod'] ? 'prod' : 'dev';
 export const isDev = argv['dev'];
 export const isProd = argv['prod'];
 
 export const ROOT_DIR = normalize(join(__dirname, '..'));
 export const SRC_DIR = join(ROOT_DIR, 'src');
-export const DEST_DIR = join(ROOT_DIR, 'public');
+export const DIST_DIR = 'dist';
+export const DEST_DIR = join(ROOT_DIR, DIST_DIR, env);
 
 export const html = {
   src: '.',
@@ -118,6 +120,10 @@ export const sizeReport = {
 export const watch = {
   // javascript wathing handled in the javascripts task
   watchableTasks: ['html', 'assets', 'fonts', 'images', 'css']
+};
+
+export const browserSync = {
+  port: argv['port'] || (isProd ? 8080 : 3000)
 };
 
 export const checkVersions = {

@@ -10,4 +10,4 @@ $.get('http://localhost:3000/api/sample', (res) => {
   console.log('Response from sample api: ', res);
 });
 
-log('Hello form JavaScript!');
+log('Hello there!');
