@@ -1,4 +1,4 @@
-import {isDev, isProd, SRC_DIR, DEST_DIR, ROOT_DIR, js, jsLint} from '../config';
+import {isDev, isProd, SRC_DIR, DEST_DIR, ROOT_DIR, js, jsLint} from '../../config';
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import browserify from 'browserify';

@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import {checkVersions} from '../config';
+import {checkVersions} from '../../config';
 import {exec} from 'child_process';
 import semver from 'semver';
 import chalk from 'chalk';

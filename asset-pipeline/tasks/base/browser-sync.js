@@ -1,6 +1,7 @@
 import browserSync from 'browser-sync';
 import gulp from 'gulp';
-import {isProd} from '../config';
+import {isProd, ROOT_DIR} from '../../config';
+import {join} from 'path';
 
 export const bs = browserSync.create();
 
@@ -17,7 +18,7 @@ gulp.task('browser-sync', () => {
 
     // custom middleware for mock api
     middleware(req, res, next) {
-      require('../../api/api')(req, res, next);
+      require(join(ROOT_DIR, 'api', 'api'))(req, res, next);
     },
 
     // default port

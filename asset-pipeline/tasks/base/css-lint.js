@@ -1,5 +1,5 @@
-import config from '../config';
-import {isDev, SRC_DIR, css, cssLint} from '../config';
+import config from '../../config';
+import {isDev, SRC_DIR, css, cssLint} from '../../config';
 import gulp from 'gulp';
 import {join} from 'path';
 import cache from 'gulp-cached';

@@ -1,4 +1,4 @@
-import {DEST_DIR, rev as _rev} from '../config';
+import {DEST_DIR, rev as _rev} from '../../config';
 import gulp from 'gulp';
 import {join} from 'path';
 import rev from 'gulp-rev';

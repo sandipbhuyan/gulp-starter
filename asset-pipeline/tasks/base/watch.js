@@ -1,4 +1,4 @@
-import * as config from '../config';
+import * as config from '../../config';
 import gulp from 'gulp';
 import {join} from 'path';
 import watch from 'gulp-watch';

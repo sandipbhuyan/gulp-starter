@@ -1,4 +1,4 @@
-import {isDev, SRC_DIR, jsLint} from '../config';
+import {isDev, SRC_DIR, jsLint} from '../../config';
 import gulp from 'gulp';
 import {join} from 'path';
 import eslint from 'gulp-eslint';

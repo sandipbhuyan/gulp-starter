@@ -1,4 +1,4 @@
-import {isDev, isProd, SRC_DIR, DEST_DIR, css, cssLint} from '../config';
+import {isDev, isProd, SRC_DIR, DEST_DIR, css, cssLint} from '../../config';
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import postcss from 'gulp-postcss';

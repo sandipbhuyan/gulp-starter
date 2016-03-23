@@ -124,3 +124,35 @@ export const checkVersions = {
   npm: '2.14.2',
   node: '4.0.0'
 };
+
+export const prodTasks = [
+  'clean',
+  [
+    'js-lint',
+    'css-lint'
+  ],
+  [
+    'html',
+    'fonts',
+    'images',
+    'css',
+    'js'
+  ],
+  'rev-assets',
+  'rev-update-references',
+  'assets',
+  'size-report'
+];
+
+export const devTasks = [
+  'clean',
+  [
+    'html',
+    'assets',
+    'fonts',
+    'images',
+    'css',
+    'js'
+  ],
+  'watch'
+];

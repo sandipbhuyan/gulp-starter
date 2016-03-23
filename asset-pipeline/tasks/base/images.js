@@ -1,4 +1,4 @@
-import {isDev, SRC_DIR, DEST_DIR, images} from '../config';
+import {isDev, SRC_DIR, DEST_DIR, images} from '../../config';
 import cache from 'gulp-cached';
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
