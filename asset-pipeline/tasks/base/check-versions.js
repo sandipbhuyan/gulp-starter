@@ -2,15 +2,10 @@ import gulp from 'gulp';
 import {checkVersions} from '../../config';
 import {exec} from 'child_process';
 import semver from 'semver';
-import chalk from 'chalk';
 import {isNull} from 'lodash';
+import reportError from '../../utils/base/report-error';
 
-function reportError(message) {
-  console.error(chalk.white.bgRed.bold(message));
-  process.exit(1);
-}
-
-gulp.task('check-versions', (cb) => {
+gulp.task('check-versions', (done) => {
   exec('npm --version', (error, stdout, stderr) => {
     if (!isNull(error)) {
       reportError('npm preinstall error: ' + error + stderr);
@@ -31,5 +26,5 @@ gulp.task('check-versions', (cb) => {
     }
   });
 
-  cb();
+  done();
 });
