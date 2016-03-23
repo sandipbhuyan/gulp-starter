@@ -125,7 +125,7 @@ export default {
   },
 
   checkVersions: {
-    npm: '3.3.6',
-    node: '5.0.0'
+    npm: '2.14.2',
+    node: '4.0.0'
   }
 };

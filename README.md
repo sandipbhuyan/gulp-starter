@@ -40,7 +40,7 @@ cd MyApp && npm i
   - Local production sever for testing
 
 # Basic Usage
-Make sure Node 4.2.x is installed. I recommend using [NVM](https://github.com/creationix/nvm) to manage versions.
+Make sure at least Node ^4.0.0 is installed. I recommend using [NVM](https://github.com/creationix/nvm) to manage versions.
 
 #### Install Dependencies
 ```
