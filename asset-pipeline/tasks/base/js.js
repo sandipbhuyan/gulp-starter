@@ -12,13 +12,14 @@ import { join } from 'path';
 import { bs } from './browser-sync';
 import gulpIf from 'gulp-if';
 import uglify from 'gulp-uglify';
+import gutil from 'gulp-util';
 
 const paths = {
   src: join(SRC_DIR, js.src, js.fileName),
   dest: join(DEST_DIR, js.dest)
 };
 
-const preTasks = (!jsLint.ideSupport && isDev) ? ['js-lint'] : [];
+const preTasks = (isDev && !jsLint.ideSupport) ? ['js-lint'] : [];
 
 const options = {
   debug: true,
@@ -33,17 +34,7 @@ const options = {
 
 if (isDev) Object.assign({}, options, watchify.args);
 
-let bundler = browserify(options);
-
-bundler.transform(babelify);
-// bundler.transform(hmr);
-
-if (isDev) {
-  bundler = watchify(bundler);
-  bundler.on('update', () => gulp.start('js'));
-}
-
-function bundle() {
+function bundle(bundler) {
   return bundler
     .bundle()
     .pipe(plumber())
@@ -56,4 +47,24 @@ function bundle() {
     .pipe(gulpIf(isDev, bs.stream({ once: true })));
 }
 
-gulp.task('js', preTasks, () => bundle());
+function jsDevTask() {
+  const b = browserify(options)
+    .transform(babelify);
+  // .transform(hmr);
+
+  const w = watchify(b)
+    .on('update', () => bundle(w))
+    .on('log', gutil.log);
+
+  return bundle(w);
+}
+
+function jsProdTask() {
+  const b = browserify(options)
+    .transform(babelify);
+  // .transform(hmr);
+
+  return bundle(b);
+}
+
+gulp.task('js', preTasks, () => isDev ? jsDevTask() : jsProdTask());
