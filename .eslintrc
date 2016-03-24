@@ -1,7 +1,10 @@
 {
+  "parser": "babel-eslint",
   "extends": "airbnb/base",
   "root": true,
   "rules": {
+    // disallow strict mode because we use babel
+    "strict": 0,
     // disallow trailing commas
     "comma-dangle": [2, "never"],
     // do not require function expressions to have a name
