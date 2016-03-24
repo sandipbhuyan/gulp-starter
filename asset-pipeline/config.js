@@ -34,7 +34,13 @@ export const js = {
   glob: '**/*.js',
   // noParse is an array which will skip all require() and global parsing for each file in the array. Use this for
   // giant libs like jquery or threejs that don't have any requires or node-style globals but take forever to parse.
-  noParse: ['jquery', 'lodash', 'bootstrap', 'tether'],
+  // http://stackoverflow.com/a/18543403/1949274
+  noParse: [
+    require.resolve('jquery'),
+    require.resolve('lodash'),
+    require.resolve('bootstrap'),
+    require.resolve('tether')
+  ],
   // extensions is an array of optional extra extensions for the module lookup machinery to use when the extension
   // has not been specified. By default browserify considers only .js and .json files in such cases.
   extensions: []
