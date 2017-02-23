@@ -17,6 +17,8 @@ gulp.task('js-lint', () => {
     .src(paths.src)
     .pipe(gulpIf(isDev, cache(jsLint.cacheName)))
     .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+    .pipe(eslint.format());
+    // To have the process exit with an error code (1) on
+    // lint error, return the stream and pipe to failAfterError last.
+    // .pipe(eslint.failAfterError());
 });

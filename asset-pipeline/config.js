@@ -38,8 +38,7 @@ export const js = {
   noParse: [
     require.resolve('jquery'),
     require.resolve('lodash'),
-    require.resolve('bootstrap'),
-    require.resolve('tether')
+    require.resolve('bootstrap-sass')
   ],
   // extensions is an array of optional extra extensions for the module lookup machinery to use when the extension
   // has not been specified. By default browserify considers only .js and .json files in such cases.
