@@ -3,3 +3,8 @@
 @import "variables";
 @import "scaffolding";
 @import "_header";
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
