@@ -6,24 +6,40 @@ header {
     align-items: center;
 
     .description-section {
-      display: flex;
-      height: 100%;
-      justify-content: space-between;
-      ul {
+      display: none;
+    }
+    .name-container {
+      color: #c7c7c7;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    .description {
+      .name-container {
+        display: none;
+      }
+      .description-section {
         display: flex;
-        li {
-          margin-left: 10px;
-          &:first-child {
-            margin-left: 0;
-          }
+        height: 100%;
+        justify-content: space-between;
+        ul {
+          display: flex;
+          li {
+            margin-left: 10px;
+            &:first-child {
+              margin-left: 0;
+            }
 
-          i {
-            color: $silver;
-          }
+            i {
+              color: $silver;
+            }
 
-          span {
-            color: $silver;
-            margin-left: 3px;
+            span {
+              color: $silver;
+              margin-left: 3px;
+            }
           }
         }
       }
