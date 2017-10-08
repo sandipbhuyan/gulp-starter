@@ -15,12 +15,24 @@ header {
   }
 
   .logo-container {
+    padding: 20px 0;
+    background: #eaf9ff;
+
     .image-container {
+      h2,h1 {
+        display: none;
+      }
       .logo {
         height: 150px;
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        p {
+          font-size: 20px;
+          font-weight: 700;
+          color: #000082;
+        }
 
        img {
           height: 100%;
@@ -56,6 +68,42 @@ header {
               color: $silver;
               margin-left: 3px;
             }
+          }
+        }
+      }
+    }
+
+    .logo-container {
+
+      .image-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .college-name {
+          margin-left: 20px;
+
+          h2,h1 {
+            display: block;
+            color: #03035d;
+
+            font-weight: 700;
+          }
+
+          h1 {
+            font-size: 53px;
+            margin: 15px 0;
+          }
+        }
+
+        .logo {
+          height: 250px;
+          p {
+            display: none;
+          }
+
+          img {
+            height: 100%;
           }
         }
       }
