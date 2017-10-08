@@ -8,8 +8,24 @@ header {
     .description-section {
       display: none;
     }
+
     .name-container {
       color: #c7c7c7;
+    }
+  }
+
+  .logo-container {
+    .image-container {
+      .logo {
+        height: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+       img {
+          height: 100%;
+        }
+      }
     }
   }
 }
