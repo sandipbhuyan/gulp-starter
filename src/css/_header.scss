@@ -40,9 +40,97 @@ header {
       }
     }
   }
+
+  .navbar {
+    .navbar-container {
+      background: #0f0033;
+
+      .navbar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid white;
+
+        h3 {
+          margin: 0;
+          color: $white;
+          font-weight: 700;
+        }
+
+        #hamburger-icon {
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          background: #0f0033;
+          border: 1px solid #fff;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          span {
+            display: block;
+            height: 2px;
+            width: 60%;
+            background: #fff;
+            border-radius: 9px;
+            opacity: 1;
+            margin: 3px;
+          }
+        }
+      }
+
+      nav {
+        //display: none;
+        width: 100%;
+        height: auto;
+        padding: 0;
+
+        ul {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: column;
+          padding: 0;
+
+          li{
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            a {
+              padding: 20px;
+              font-weight: 500;
+              color: $white;
+              text-decoration: none;
+              i {
+                color: #fff;
+                margin-left: 3px;
+              }
+            }
+            &:last-child a{
+              padding-right: 0;
+            }
+            ul {
+              display: none;
+            }
+            &:hover {
+              background: $white;
+
+              a{
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 980px) {
   header {
     .description {
       .name-container {
@@ -97,7 +185,7 @@ header {
         }
 
         .logo {
-          height: 230px;
+          height: 200px;
           p {
             display: none;
           }
@@ -106,6 +194,12 @@ header {
             height: 100%;
           }
         }
+      }
+    }
+
+    .navbar {
+      #hamburger-icon {
+        display: none;
       }
     }
   }
