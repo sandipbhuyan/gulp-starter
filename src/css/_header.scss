@@ -43,7 +43,7 @@ header {
 
   .navbar {
     .navbar-container {
-      background: #0f0033;
+      background: #e6e6e6;
 
       .navbar-header {
         display: flex;
@@ -54,7 +54,7 @@ header {
 
         h3 {
           margin: 0;
-          color: $white;
+          color: #003b84;
           font-weight: 700;
         }
 
@@ -62,7 +62,7 @@ header {
           width: 40px;
           height: 40px;
           cursor: pointer;
-          background: #0f0033;
+          background: #006a82;
           border: 1px solid #fff;
           border-radius: 5px;
           display: flex;
@@ -84,9 +84,6 @@ header {
 
       nav {
         //display: none;
-        width: 100%;
-        height: auto;
-        padding: 0;
 
         ul {
           display: flex;
@@ -102,7 +99,7 @@ header {
             a {
               padding: 20px;
               font-weight: 500;
-              color: $white;
+              color: #006a82;
               text-decoration: none;
               i {
                 color: #fff;
@@ -116,10 +113,10 @@ header {
               display: none;
             }
             &:hover {
-              background: $white;
+              background: #757575;
 
               a{
-                color: #000;
+                color: #006a82;
               }
             }
           }
@@ -128,6 +125,12 @@ header {
     }
 
   }
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  padding: 0;
 }
 
 @media screen and (min-width: 980px) {
@@ -198,9 +201,80 @@ header {
     }
 
     .navbar {
-      #hamburger-icon {
-        display: none;
+      .navbar-container {
+        .navbar-header {
+          display: none;
+        }
+        nav {
+
+          ul {
+            flex-direction: row;
+
+            li:hover > ul {
+              visibility: visible;
+              opacity: 1;
+              z-index: 1000;
+            }
+            li {
+              width: auto;
+
+              ul {
+                display: block;
+                visibility: hidden;
+                opacity: 0;
+                z-index: -1;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                background: #e6e6e6;
+                //padding: 10px;
+                margin-top: -14px;
+                transition: opacity .3s ease-in-out;
+
+                li {
+                  float: none;
+                  width: 150px;
+
+                  &:hover {
+                    background: #545454;
+
+                    a{
+                      color: $white;
+                    }
+                  }
+                }
+
+                a {
+                  display:inline-block;
+                  width: 100%;
+                  line-height: 120%;
+                  padding: 8px 0;
+                  color: #dcdcdc;
+                  border-bottom: .5px solid #858181;
+                  font-size: 12px !important;
+                  //text-transform: uppercase !important;
+                  font-weight: 500;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+
+                  &:first-child {
+                    padding-top: 0;
+                  }
+                  &:last-child {
+                    padding-bottom: 0;
+                    border: none;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
+}
+
+.active-content {
+  background: white;
 }
