@@ -1,27 +1,12 @@
 @import "vendor/vendor";
-
+@import "_body";
 @import "variables";
 @import "scaffolding";
+@import "_header";
+@import "_normalize";
 
-.container {
-  margin-top: 33px;
+ul {
+  list-style-type: none;
+  margin: 0;
 }
 
-.fa-heart {
-  // http://cssnext.io/features/
-  color: rebeccapurple;
-}
-
-.sample-bg-image {
-  // visit https://github.com/assetsjs/postcss-assets for more info
-  width: width('sample.jpeg');
-  height: height("sample.jpeg");
-  background-size: size("sample.jpeg");
-  background-image: resolve("sample.jpeg");
-  // Optionally inline in Base64 encoding.
-  // background-image: inline("./sample.jpeg");
-
-  color: #fffff1;
-  color: #fffff2;
-
-}
