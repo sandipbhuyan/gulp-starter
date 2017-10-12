@@ -1,0 +1,280 @@
+header {
+  .description {
+    min-height: 30px;
+    background: url(../img/texture_bg.png) repeat scroll 0 0 #444;
+    display: flex;
+    align-items: center;
+
+    .description-section {
+      display: none;
+    }
+
+    .name-container {
+      color: #c7c7c7;
+    }
+  }
+
+  .logo-container {
+    padding: 20px 0;
+    background: #eaf9ff;
+
+    .image-container {
+      h2,h1 {
+        display: none;
+      }
+      .logo {
+        height: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        p {
+          font-size: 20px;
+          font-weight: 700;
+          color: #000082;
+        }
+
+       img {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    .navbar-container {
+      background: #e6e6e6;
+
+      .navbar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid white;
+
+        h3 {
+          margin: 0;
+          color: #003b84;
+          font-weight: 700;
+        }
+
+        #hamburger-icon {
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          background: #006a82;
+          border: 1px solid #fff;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          span {
+            display: block;
+            height: 2px;
+            width: 60%;
+            background: #fff;
+            border-radius: 9px;
+            opacity: 1;
+            margin: 3px;
+          }
+        }
+      }
+
+      nav {
+        //display: none;
+
+        ul {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: column;
+          padding: 0;
+
+          li{
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            a {
+              padding: 20px;
+              font-weight: 500;
+              color: #006a82;
+              text-decoration: none;
+              i {
+                color: #fff;
+                margin-left: 3px;
+              }
+            }
+            &:last-child a{
+              padding-right: 0;
+            }
+            ul {
+              display: none;
+            }
+            &:hover {
+              background: #757575;
+
+              a{
+                color: #006a82;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+@media screen and (min-width: 980px) {
+  header {
+    .description {
+      .name-container {
+        display: none;
+      }
+      .description-section {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        ul {
+          display: flex;
+          li {
+            margin-left: 10px;
+            &:first-child {
+              margin-left: 0;
+            }
+
+            i {
+              color: $silver;
+            }
+
+            span {
+              color: $silver;
+              margin-left: 3px;
+            }
+          }
+        }
+      }
+    }
+
+    .logo-container {
+
+      .image-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .college-name {
+          margin-left: 20px;
+
+          h2,h1 {
+            display: block;
+            color: #03035d;
+
+            font-weight: 700;
+          }
+
+          h1 {
+            font-size: 53px;
+            margin: 15px 0;
+          }
+        }
+
+        .logo {
+          height: 200px;
+          p {
+            display: none;
+          }
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .navbar {
+      .navbar-container {
+        .navbar-header {
+          display: none;
+        }
+        nav {
+
+          ul {
+            flex-direction: row;
+
+            li:hover > ul {
+              visibility: visible;
+              opacity: 1;
+              z-index: 1000;
+            }
+            li {
+              width: auto;
+
+              ul {
+                display: block;
+                visibility: hidden;
+                opacity: 0;
+                z-index: -1;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                background: #e6e6e6;
+                //padding: 10px;
+                margin-top: -14px;
+                transition: opacity .3s ease-in-out;
+
+                li {
+                  float: none;
+                  width: 150px;
+
+                  &:hover {
+                    background: #545454;
+
+                    a{
+                      color: $white;
+                    }
+                  }
+                }
+
+                a {
+                  display:inline-block;
+                  width: 100%;
+                  line-height: 120%;
+                  padding: 8px 0;
+                  color: #dcdcdc;
+                  border-bottom: .5px solid #858181;
+                  font-size: 12px !important;
+                  //text-transform: uppercase !important;
+                  font-weight: 500;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+
+                  &:first-child {
+                    padding-top: 0;
+                  }
+                  &:last-child {
+                    padding-bottom: 0;
+                    border: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.active-content {
+  background: white;
+}

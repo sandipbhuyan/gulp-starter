@@ -1,5 +1,13 @@
 @import "vendor/vendor";
-
+@import "_body";
 @import "variables";
 @import "scaffolding";
 @import "_footer";
+@import "_header";
+@import "_normalize";
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
