@@ -47,7 +47,7 @@ footer{
 	}
 	.bottom-footer
 	{
-	border-top:1px dotted white;
+	border-top:1px dotted black;
 	p{
 	color:#8c8989;
 	font-family:sans-serif;
@@ -68,17 +68,27 @@ footer{
 	}
 	@media only screen and (min-width: 980px){
 	body{
-
+	min-height:100vh;
 	}
 	footer{
+	postion:absoulte;
+	margin-bottom:0px;
+
 	}
 	.column{
 	display:flex;
-	padding:0 15px;
+	justify-content:center;
+	.column-part{
+	margin-top:20px;
+	margin-bottom:20px;
+	}
 	}
 	.bottom-footer{
-	border-style:none;
+	position:absoulte;
+	margin-bottom:0px;
 	}
+
+	
 
 	}
 }	
