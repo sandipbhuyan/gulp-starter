@@ -19,14 +19,14 @@
       font-size: 0;
       li {
         display: inline-block;
-        max-width: 100%;
+        width: 100%;
         .slide-body {
           display: inline-block;
           position: relative;
-          max-width: 100%;
+          width: 100%;
           font-size: 14px;
           img {
-            max-width: 100%;
+           width: 100%;
           }
           .caption {
             position: absolute;
