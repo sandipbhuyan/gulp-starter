@@ -6,4 +6,37 @@
     margin: 22px 0;
     font-weight: 700;
   }
+  .placement-slider
+  {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+  }
+  .calendar-column
+  {
+    box-sizing:border-box;
+    width:25%;
+    float:right;
+    h3
+    {
+      color: #737373;
+      font-size: 24px;
+      font-family: Fjalla One;
+      
+    }
+
+    ul
+    {
+      list-style-type:square;
+    }
+    li
+    {
+
+    }
+    span
+    {
+      color:#003366;
+    }
+  }
 }
