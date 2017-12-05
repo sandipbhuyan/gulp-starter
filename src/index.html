@@ -9,8 +9,55 @@
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-Hello
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<section class="form-element">
+  <form action="">
+    <div class="form-group event-name">
+        <h3>Event Name</h3>
+        <label for="event-name"></label>
+        <input type="text" name="event-name">
+    </div>
+    <div class="specifications form-group">
+      <h3>Specification</h3>
+      <div class="items-0">
+        <div class="item-details">
+          <div class="size">
+            <span>Size</span>
+            <input type="text" class="input-field size" name="flex-size" placeholder="width/height" >
+          </div>
+          <div class="quantity">
+            <span>Quantity</span>
+            <input type="text" class="input-field quantity" name="quantity">
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="#" class="btn btn-add">+ Add</a>
+      </div>
+    </div>
+    <div class="form-group add-file">
+      <label for="Upload file"> Upload your flex</label>
+      <input type="file" name="flex-pic" class="file-upload">
+    </div>
+    <button type="submit" class="btn btn-submit">
+      Submit
+    </button>
+  </form>
+</section>
+<section id="cloning-child" style="display: none">
+  <div class="items">
+    <div class="item-details">
+      <div class="size">
+        <span>Size</span>
+        <input type="text" class="input-field size" name="flex-size" placeholder="width/height" >
+      </div>
+      <div class="quantity">
+        <span>Quantity</span>
+        <input type="text" class="input-field quantity" name="quantity">
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>
