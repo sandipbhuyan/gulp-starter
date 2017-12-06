@@ -5,33 +5,43 @@
   <title>Cet bbsr</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 <section class="form-element">
-  <form action="">
+  <form action="" method="post">
+    <h3 class="heading-deatils">Flex details</h3>
+    <div class="form-group email-address">
+      <input type="email" class="email input-field" name="email" placeholder="Email Address">
+    </div>
     <div class="form-group event-name">
-        <h3>Event Name</h3>
-        <label for="event-name"></label>
-        <input type="text" name="event-name">
+        <input type="text" class="event-name input-field" name="event-name" placeholder="Event's Name">
     </div>
     <div class="specifications form-group">
       <h3>Specification</h3>
-      <div class="items-0">
-        <div class="item-details">
-          <div class="size">
-            <span>Size</span>
-            <input type="text" class="input-field size" name="flex-size" placeholder="width/height" >
-          </div>
-          <div class="quantity">
-            <span>Quantity</span>
-            <input type="text" class="input-field quantity" name="quantity">
+      <div class="flex-details">
+        <h2 class="flex-details-header flex-heade-1">
+          <span>Flex 1</span>
+          <a class="z-depth-1 close-itemlist"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+        </h2>
+        <div class="items">
+          <div class="item-details">
+            <div class="size details-input">
+              <span>Size</span>
+              <input type="text" class="input-size" name="flex-size-1" placeholder="width/height" >
+            </div>
+            <div class="quantity details-input">
+              <span>Quantity</span>
+              <input type="text" class="input-quantity" name="quantity-1" placeholder="Quantity">
+            </div>
           </div>
         </div>
       </div>
-      <div>
-        <a href="#" class="btn btn-add">+ Add</a>
+      <div class="add-btn">
+        <a href="#" class="btn btn-add add-item">+ Add</a>
       </div>
     </div>
     <div class="form-group add-file">
@@ -44,20 +54,26 @@
   </form>
 </section>
 <section id="cloning-child" style="display: none">
-  <div class="items">
+  <h2 class="flex-details-header flex-header-type">
+    <span>Flex 2</span>
+    <a class="z-depth-1 close-itemlist"><i class="fa fa-times" aria-hidden="true"></i>
+    </a>
+  </h2>
+  <div class="item-type">
     <div class="item-details">
-      <div class="size">
+      <div class="size details-input">
         <span>Size</span>
-        <input type="text" class="input-field size" name="flex-size" placeholder="width/height" >
+        <input type="text" class="input-size" name="flex-size" placeholder="width/height" >
       </div>
-      <div class="quantity">
+      <div class="quantity details-input">
         <span>Quantity</span>
-        <input type="text" class="input-field quantity" name="quantity">
+        <input type="text" class="input-quantity" name="quantity" placeholder="Quantity">
       </div>
     </div>
   </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>
