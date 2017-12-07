@@ -12,7 +12,7 @@
 </head>
 <body>
 <section class="form-element">
-  <form action="" method="post">
+  <form action="http://localhost:5000/login" method="POST">
     <h3 class="heading-deatils">Flex details</h3>
     <div class="form-group email-address">
       <input type="email" class="email input-field" name="email" placeholder="Email Address">
@@ -31,11 +31,11 @@
           <div class="item-details">
             <div class="size details-input">
               <span>Size</span>
-              <input type="text" class="input-size" name="flex-size-1" placeholder="width/height" >
+              <input type="text" class="input-size" name="flex-size[]" placeholder="width/height" >
             </div>
             <div class="quantity details-input">
               <span>Quantity</span>
-              <input type="text" class="input-quantity" name="quantity-1" placeholder="Quantity">
+              <input type="text" class="input-quantity" name="quantity[]" placeholder="Quantity">
             </div>
           </div>
         </div>
@@ -48,9 +48,7 @@
       <label for="Upload file"> Upload your flex</label>
       <input type="file" name="flex-pic" class="custom-file-input">
     </div>
-    <button type="submit" class="btn btn-submit">
-      Submit
-    </button>
+    <input type="submit" class="btn btn-submit" value="Submit">
   </form>
 </section>
 <section id="cloning-child" style="display: none">
@@ -63,11 +61,11 @@
     <div class="item-details">
       <div class="size details-input">
         <span>Size</span>
-        <input type="text" class="input-size" name="flex-size" placeholder="width/height" >
+        <input type="text" class="input-size" name="flex-size[]" placeholder="width/height" >
       </div>
       <div class="quantity details-input">
         <span>Quantity</span>
-        <input type="text" class="input-quantity" name="quantity" placeholder="Quantity">
+        <input type="text" class="input-quantity" name="quantity[]" placeholder="Quantity">
       </div>
     </div>
   </div>

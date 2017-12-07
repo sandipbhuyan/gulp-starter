@@ -9,8 +9,6 @@ $(document).ready(() => {
     $item = parseInt($item) + 1;
     localStorage.setItem('item', $item);
     $('.flex-details .flex-header-type').find('span:first-child').html(`Flex ${$item}`);
-    $('.specifications .item-type .size').attr('name', `flex-size-${$item}`);
-    $('.specifications .item-type .quantity').attr('name', `quantity-${$item}`);
     $('.specifications .item-type').removeClass('item-type').addClass(`item-${$item}`);
     $('.flex-details .flex-header-type').removeClass('flex-header-type').addClass(`flex-header-${$item}`);
     const $previousItem = $item - 1;
