@@ -212,3 +212,15 @@ section.form-element {
     background-color: #fff!important;
   }
 }
+@media screen and (min-width: 980px) {
+  section.form-element {
+    form {
+      min-height: 720px;
+      width: 980px;
+      align-items: center;
+    }
+    .form-group {
+      width: 480px!important;
+    }
+  }
+}
